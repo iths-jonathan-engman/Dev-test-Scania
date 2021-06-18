@@ -1,0 +1,23 @@
+@import '/src/variables.scss';
+
+.header-container {
+  background-color: $blue-900;
+}
+
+.header-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 64px;
+}
+
+.header-greet {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  height: 152px;
+  color: white;
+  padding: 0px 16px 40px 16px;
+}
+
+.heading-wrapper h1 {
+  font-size: 32px;
+}
