@@ -3,30 +3,44 @@
 table {
   width: 768px;
   border-spacing: 0px;
-}
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  margin-top: 80px;
 
-thead {
+  thead {
   background-color: $blue-100;
   text-align: left;
-}
-
-tbody {
-  background-color: $white;
-}
-
-th {
-  height: 48px;
-  padding: 16px 0px 16px 16px;
-  border-bottom: 1px solid $blue-200;
-  box-sizing: border-box;
-  &:last-child {
-    border-radius: 0px 4px 0px 0px;
   }
-}
 
-td {
-  height: 48px;
-  padding: 16px 0px 16px 16px;
-  box-sizing: border-box;
-  border-bottom: 1px solid $grey;
+  tbody {
+    background-color: $white;
+  }
+
+  th {
+    height: 48px;
+    padding: 16px 0px 16px 16px;
+    border-bottom: 1px solid $blue-200;
+    box-sizing: border-box;
+    &:last-child {
+      border-radius: 0px 4px 0px 0px;
+    }
+  }
+
+  tr:hover {
+    background-color: $blue-200;
+  }
+
+  td {
+    height: 48px;
+    padding: 16px 0px 16px 16px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $grey;
+  }
+
+  td:hover {
+    cursor: pointer;
+  }
+
 }
