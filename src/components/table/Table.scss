@@ -1,0 +1,32 @@
+@import '/src/variables.scss';
+
+table {
+  width: 768px;
+  border-spacing: 0px;
+}
+
+thead {
+  background-color: $blue-100;
+  text-align: left;
+}
+
+tbody {
+  background-color: $white;
+}
+
+th {
+  height: 48px;
+  padding: 16px 0px 16px 16px;
+  border-bottom: 1px solid $blue-200;
+  box-sizing: border-box;
+  &:last-child {
+    border-radius: 0px 4px 0px 0px;
+  }
+}
+
+td {
+  height: 48px;
+  padding: 16px 0px 16px 16px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $grey;
+}

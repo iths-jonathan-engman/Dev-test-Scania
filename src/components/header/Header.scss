@@ -1,23 +1,45 @@
 @import '/src/variables.scss';
 
-.header-container {
-  background-color: $blue-900;
-}
-
 .header-top {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: $blue-900;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $white;
   height: 64px;
+  .header-title {
+    padding: 24px 0px 24px 24px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .header-icon {
+    border-left: 1px solid $blue-800;
+    width: 63px;
+    height: 64px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://cdn.digitaldesign.scania.com/logotype/1.0.0/scania_symbol/scania-symbol.svg);
+    background-size: 30px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
-.header-greet {
+.header-greeting {
+  height: 24px;
+  background-color: $white;
+  padding: 22px 0px 22px 39px;
+}
+.header-greeting span {
   display: flex;
   flex-flow: column;
-  justify-content: flex-end;
-  height: 152px;
-  color: white;
-  padding: 0px 16px 40px 16px;
-}
-
-.heading-wrapper h1 {
-  font-size: 32px;
+  justify-content: center;
+  color: $blue-900;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
