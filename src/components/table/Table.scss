@@ -16,20 +16,20 @@ table {
 
   tbody {
     background-color: $white;
+    tr:hover {
+      background-color: $blue-200;
+    }
   }
 
   th {
     height: 48px;
+    width: 25%;
     padding: 16px 0px 16px 16px;
     border-bottom: 1px solid $blue-200;
     box-sizing: border-box;
     &:last-child {
       border-radius: 0px 4px 0px 0px;
     }
-  }
-
-  tr:hover {
-    background-color: $blue-200;
   }
 
   td {
@@ -42,5 +42,4 @@ table {
   td:hover {
     cursor: pointer;
   }
-
 }

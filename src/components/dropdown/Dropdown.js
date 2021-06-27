@@ -1,10 +1,10 @@
 import './Dropdown.scss';
 import React from 'react';
-import { More, Less } from '../table/Table';
+import { LessDistance, MoreDistance } from '../table/Table';
 
-function dropFunction() {
+export function dropFunction() {
   document.querySelector(".dropdown").classList.toggle('dropdown-toggle');
-}
+};
 
 const Dropdown = () => {
   return (
@@ -18,16 +18,16 @@ const Dropdown = () => {
       </div>
 
       <div className="dropdown-value">
-        <div className="test1" tabIndex="1" onClick={More}>
+        <div tabIndex="1" onClick={LessDistance}>
           <span>&lt;&#61; 200.000 km</span>
         </div>
-        <div className="test2" tabIndex="1" onClick={Less}>
+        <div tabIndex="1" onClick={MoreDistance}>
           <span>&gt; 200.000 km</span>
         </div>
       </div>
 
     </div>
   )
-}
+};
 
 export default Dropdown;

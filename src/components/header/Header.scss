@@ -1,20 +1,22 @@
 @import '/src/variables.scss';
 
-.header-top {
-  background-color: $blue-900;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: $white;
-  height: 64px;
-  .header-title {
+.header {
+  &-top {
+    background-color: $blue-900;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $white;
+    height: 64px;
+  }
+  &-title {
     padding: 24px 0px 24px 24px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
     letter-spacing: -0.01em;
   }
-  .header-icon {
+  &-icon {
     border-left: 1px solid $blue-800;
     width: 63px;
     height: 64px;
@@ -26,20 +28,19 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-}
-
-.header-greeting {
-  height: 24px;
-  background-color: $white;
-  padding: 22px 0px 22px 39px;
-}
-.header-greeting span {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  color: $blue-900;
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  &-greeting {
+    height: 24px;
+    background-color: $white;
+    padding: 22px 0px 22px 39px;
+    span {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      color: $blue-900;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+  }
 }

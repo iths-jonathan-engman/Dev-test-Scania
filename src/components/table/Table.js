@@ -31,7 +31,6 @@ window.onload = function tableFunction() {
 
   drivers.forEach(function(driver) {
     var tableRow = document.querySelector('.tableData');
-    // console.log(driver)
 
     var row =
     `<tr>
@@ -42,36 +41,14 @@ window.onload = function tableFunction() {
     </tr>`
 
     tableRow.innerHTML += row;
-    //  More = () => {
-    //   if (driver.distance >= 200000) {
-    //     tableRow.innerHTML += row;
-    //   }
-    // }
-    //  Less = () => {
-    //   if (driver.distance < 200000) {
-    //     tableRow.innerHTML += row;
-    //   }
-    // }
-
-
-  //   function More() {
-  //     if (driver.distance >= 200000) {
-  //       tableRow.innerHTML += row;
-  //     }
-  //   }
-
-  // function Less() {
-  //   if (driver.distance < 200000) {
-  //     tableRow.innerHTML += row;
-  //   }
-  // }
-})
+  })
 };
 
-export function More() {
+export function LessDistance() {
+  var tableRow = document.querySelector('.tableData');
+  tableRow.innerHTML = "";
 
   drivers.forEach(function(driver) {
-    var tableRow = document.querySelector('.tableData');
 
     var row =
     `<tr>
@@ -81,16 +58,17 @@ export function More() {
       <td>${driver.score}</td>
     </tr>`
 
-    if (driver.distance >= 200000) {
+    if (driver.distance <= 200000) {
       tableRow.innerHTML += row;
     }
   })
 };
 
-export function Less() {
+export function MoreDistance() {
+  var tableRow = document.querySelector('.tableData');
+  tableRow.innerHTML = "";
 
   drivers.forEach(function(driver) {
-    var tableRow = document.querySelector('.tableData');
 
     var row =
     `<tr>
@@ -100,9 +78,27 @@ export function Less() {
       <td>${driver.score}</td>
     </tr>`
 
-    if (driver.distance < 200000) {
+    if (driver.distance > 200000) {
       tableRow.innerHTML += row;
     }
+  })
+};
+
+export function ResetDistance() {
+  var tableRow = document.querySelector('.tableData');
+  tableRow.innerHTML = "";
+
+  drivers.forEach(function(driver) {
+
+    var row =
+    `<tr>
+      <td>${driver.name}</td>
+      <td>${driver.company}</td>
+      <td>${driver.distance + ' km'}</td>
+      <td>${driver.score}</td>
+    </tr>`
+
+    tableRow.innerHTML += row;
   })
 };
 
@@ -124,7 +120,6 @@ const Table = () => {
       </table>
     </div>
   )
-}
+};
 
-// export default {More, Less};
 export default Table;
